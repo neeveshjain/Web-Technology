@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<div ng-app="">
+//Directive for Starting an angular js Application
+<div ng-init>
+//Use to assign values to variable
+<h2>COST CALCULATOR</h2>
+Quanity:<input type="number" ng-model="quantity">
+//defines the variable to be used.
+Price :<input type="number" ng-model="price">
+Quanity 2:<input type="number" ng-model="quantity1">
+Price 2 :<input type="number" ng-model="price1">
+<p><b> Total dollars are :</b>{{quantity*price}}</p>
+<p><b> Total dollars are </b> {{quantity1*price1}}</p>
+<p> Total dollars are {{(quantity*price )+(quantity1*price1)}}</p>
+</div>
+
+
+</html>
