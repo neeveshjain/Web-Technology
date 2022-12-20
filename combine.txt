@@ -1,0 +1,172 @@
+<html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body>
+<div ng-app ng-init="student={sid:101,sname:'prachi'}">
+<body>
+<span>
+student id={{student.sid}}<br>
+student name={{student.sname}}<br>
+</span>
+</div>
+</body>
+</html>
+var express = require('express'); 
+
+var app = express(); 
+
+ 
+
+var bodyParser = require("body-parser"); 
+
+app.use(bodyParser.urlencoded({ extended: false })); 
+
+ 
+
+app.get('/', function (req, res) { 
+
+    res.sendFile('C:/Users/hp/Desktop/WT/index.html'); 
+
+}); 
+
+
+
+
+//index 
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+
+<head>
+
+
+
+   <meta charset="utf-8" />
+
+
+
+   <title></title>
+
+
+
+</head>
+
+
+
+<body bgcolor=Khaki>
+
+
+
+   <form action="/submit-student-data" method="post">
+
+
+
+       First Name: <input name="firstName" type="text" /> <br />
+
+
+
+       Last Name: <input name="lastName" type="text" /> <br />
+
+
+
+       <input type="submit" />
+
+
+
+   </form>
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+
+
+<body>
+
+
+
+
+
+<div data-ng-app="" data-ng-init="quantity1=1;price1=5;quantity2=1;price2=5">
+
+
+
+
+
+<h2>Cost Calculator</h2>
+
+
+
+
+
+Quantity1: <input type="number" ng-model="quantity1">
+
+
+
+Price: <input type="number" ng-model="price1">
+<br>
+
+
+
+Quantity2: <input type="number" ng-model="quantity2">
+
+
+
+Price: <input type="number" ng-model="price2">
+
+
+
+
+
+<p><b>Total in dollar:</b> {{(quantity1 * price1)+(quantity2 * price2)}}</p>
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+
+
+
+</html>
+</body>
+
+
+
+</html>
+
+ 
+
+app.post('/submit-student-data', function (req, res) { 
+
+    var name = req.body.firstName + ' ' + req.body.lastName; 
+
+     
+
+    res.send(name + ' Submitted Successfully!'); 
+
+}); 
+
+ 
+
+var server = app.listen(5000, function () { 
+
+    console.log('Node server is running..'); 
+
+});
